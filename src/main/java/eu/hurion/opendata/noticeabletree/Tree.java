@@ -1,4 +1,4 @@
-package eu.hurion.opendata.arbre;
+package eu.hurion.opendata.noticeabletree;
 
 import java.util.Date;
 

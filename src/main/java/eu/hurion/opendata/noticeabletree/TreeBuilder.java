@@ -1,4 +1,4 @@
-package eu.hurion.opendata.arbre;
+package eu.hurion.opendata.noticeabletree;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;

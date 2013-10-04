@@ -1,4 +1,4 @@
-package eu.hurion.opendata.arbre;
+package eu.hurion.opendata.noticeabletree;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -16,6 +16,9 @@ public class ExcelReader {
     public Collection<Tree> read(final String fileName) throws IOException {
         List<Tree> result = new ArrayList<Tree>();
         InputStream file = getClass().getResourceAsStream(fileName);
+        if (file == null){
+            throw new IllegalArgumentException("File " + fileName + " not found");
+        }
         try {
 
             //Get the workbook instance for XLS file
@@ -37,8 +40,7 @@ public class ExcelReader {
                 System.out.println(tree.toString());
             }
         } finally {
-            file.close();
-
+           file.close();
         }
         return result;
     }
